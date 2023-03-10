@@ -1,5 +1,5 @@
-let button1 = document.querySelector("#buttons1");
-let button2 = document.querySelector("#buttons2");
+let counter1Buttons = document.querySelector("#buttons1");
+let counter2Buttons = document.querySelector("#buttons2");
 
 let counter = function (val) {
   let count = 0;
@@ -34,13 +34,13 @@ let display = function (evt, div) {
   document.getElementById(`${div}`).innerHTML = "<h1>" + valOfCounter + "</h1>";
 };
 
-button1.addEventListener("click", function (evt) {
+counter1Buttons.addEventListener("click", function (evt) {
   if (evt.target.getAttribute("class") === "counter1-button") {
     display(evt, "output1");
   }
 });
 
-button2.addEventListener("click", function (evt) {
+counter2Buttons.addEventListener("click", function (evt) {
   if (evt.target.getAttribute("class") === "counter2-button") {
     display(evt, "output2");
   }
