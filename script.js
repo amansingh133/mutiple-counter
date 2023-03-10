@@ -28,20 +28,22 @@ let counter = function (val) {
 let counter1 = counter();
 let counter2 = counter();
 
-let display = function (evt, div) {
-  val = evt.target.getAttribute("value");
-  let valOfCounter = counter1(val);
+let display = function (valOfCounter, div) {
   document.getElementById(`${div}`).innerHTML = "<h1>" + valOfCounter + "</h1>";
 };
 
 counter1Buttons.addEventListener("click", function (evt) {
   if (evt.target.getAttribute("class") === "counter1-button") {
-    display(evt, "output1");
+    val = evt.target.getAttribute("value");
+    let valOfCounter = counter1(val);
+    display(valOfCounter, "output1");
   }
 });
 
 counter2Buttons.addEventListener("click", function (evt) {
   if (evt.target.getAttribute("class") === "counter2-button") {
-    display(evt, "output2");
+    val = evt.target.getAttribute("value");
+    let valOfCounter = counter2(val);
+    display(valOfCounter, "output2");
   }
 });
