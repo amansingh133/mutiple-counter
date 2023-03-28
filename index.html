@@ -4,29 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Counter application</title>
+    <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="counter1">
-      <div id="output1">
-        <h1>0</h1>
+    <h1 id="make-counters-title">MAKE COUNTERS</h1>
+    <div class="controls">
+      <div>
+        <button onclick="toggleShape()">Toggle Shape</button>
       </div>
-      <div id="buttons1">
-        <button class="counter1-button" value="increase">Increase</button>
-        <button class="counter1-button" value="decrease">Decrease</button>
-        <button class="counter1-button" value="reset">Reset</button>
-      </div>
-    </div>
-    <div id="counter2">
-      <div id="output2">
-        <h1>0</h1>
-      </div>
-      <div id="buttons2">
-        <button class="counter2-button" value="increase">Increase</button>
-        <button class="counter2-button" value="decrease">Decrease</button>
-        <button class="counter2-button" value="reset">Reset</button>
+      <div>
+        <input
+          type="checkbox"
+          id="backfaces"
+          onclick="toggleBackfaces()"
+          checked
+        /><label for="backfaces">Backfaces visible</label>
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="container">
+      <div id="stage">
+        <div id="shape" class="cube backfaces">
+          <div class="plane one">1</div>
+          <div class="plane two">2</div>
+          <div class="plane three">3</div>
+          <div class="plane four">4</div>
+          <div class="plane five">5</div>
+          <div class="plane six">6</div>
+          <div class="plane seven">7</div>
+          <div class="plane eight">8</div>
+          <div class="plane nine">9</div>
+          <div class="plane ten">10</div>
+          <div class="plane eleven">11</div>
+          <div class="plane twelve">12</div>
+        </div>
+      </div>
+    </div>
+    <div id="make-counter-btn-container">
+      <a id="counter-page-link" href="counterPage.html"
+        ><button class="button" id="make-counter-btn">
+          Make a Counter
+          <div class="button__horizontal"></div>
+          <div class="button__vertical"></div></button
+      ></a>
+    </div>
+
+    <script src="background.js"></script>
   </body>
 </html>
