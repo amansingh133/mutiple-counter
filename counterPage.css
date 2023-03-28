@@ -21,6 +21,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 40vh;
+  flex-wrap: wrap;
 }
 .form-container {
   margin-top: 30vh;
